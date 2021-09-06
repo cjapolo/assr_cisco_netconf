@@ -17,6 +17,9 @@ PythonShell.run('netconf.py', {scriptPath: path, args: 'get_config'}, (err, resu
 //})
 //
 
+
+
+
 exports.getConfiguration = function(req, res){
     res.send(getResult);
 }

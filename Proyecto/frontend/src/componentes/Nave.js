@@ -15,13 +15,7 @@ export default class Nave extends Component {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="nav-item ">
-                                <Link className="nav-link" to="/">Inicio</Link>
-                            </li>
-                           
-
-                        </ul>
+                       
 
                     </div>
 

@@ -10,6 +10,8 @@ m = manager.connect(host='sandbox-iosxr-1.cisco.com',
                     password='C1sco12345',
                     device_params={'name': "csr"})
 
+                    
+
 get_config = '''
                 <filter xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
                     <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
