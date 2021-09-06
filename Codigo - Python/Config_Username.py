@@ -1,0 +1,28 @@
+import sys
+from ncclient import manager
+import xml.dom.minidom
+
+m = manager.connect(host='192.168.122.239',
+                    port=830,
+                    username='admin',
+                    password='cisco',
+                    device_params={'name': "csr"})
+
+CONFIGURATION= """
+<config>
+    <native
+        xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <username>
+            <name>nombre</name>
+            <privilege>15</privilege>
+            <secret>
+                <encryption>0</encryption>
+                <secret>password123</secret>
+            </secret>
+        </username>
+    </native>
+</config>"""
+
+DATA= m.edit_config(CONFIGURATION, target= 'running')
+print(DATA)
+m.close_session()
